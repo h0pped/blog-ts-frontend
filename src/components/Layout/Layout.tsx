@@ -4,6 +4,7 @@ import Navbar from '../Navbar/Navbar';
 interface LayoutProps {
   children: JSX.Element;
 }
+
 function Layout({ children }: LayoutProps): JSX.Element {
   return (
     <div>
