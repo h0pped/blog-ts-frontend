@@ -26,6 +26,8 @@
     ],
     "rules": {
         "no-console": 1,       // Means warning
-        "prettier/prettier": 2 // Means error
+        "prettier/prettier": 2, // Means error
+        "react/react-in-jsx-scope": "off",
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     }
 }
