@@ -1,15 +1,18 @@
 import Footer from '../Footer/Footer';
 import Navbar from '../Navbar/Navbar';
-
+import Sidebar from '../Sidebar/Sidebar';
 interface LayoutProps {
   children: JSX.Element;
 }
 
 function Layout({ children }: LayoutProps): JSX.Element {
   return (
-    <div className="flex flex-col w-full justify-center align-center items-center">
+    <div className="bg-default">
       <Navbar />
-      <main className="w-2/3 flex flex-col items-center">{children}</main>
+      <div className="flex items-stretch min-h-screen ">
+        <Sidebar className="w-1/6" />
+        <main className="w-2/3 flex flex-col bg-default">{children}</main>
+      </div>
       <Footer />
     </div>
   );
