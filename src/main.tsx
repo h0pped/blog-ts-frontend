@@ -5,11 +5,16 @@ import App from './App';
 import Layout from './components/Layout/Layout';
 
 import './index.css';
+import SignIn from './pages/SignIn/SignIn';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
+  },
+  {
+    path: '/signin',
+    element: <SignIn />,
   },
 ]);
 

@@ -7,9 +7,9 @@ interface LayoutProps {
 
 function Layout({ children }: LayoutProps): JSX.Element {
   return (
-    <div>
+    <div className="flex flex-col w-full justify-center align-center items-center">
       <Navbar />
-      <main>{children}</main>
+      <main className="w-2/3 flex flex-col items-center">{children}</main>
       <Footer />
     </div>
   );
