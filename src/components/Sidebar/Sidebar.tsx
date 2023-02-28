@@ -4,7 +4,7 @@ interface SidebarProps {
 
 const Sidebar = ({ className }: SidebarProps) => {
   return (
-    <nav className={`${className} border-solid h-screen`}>
+    <nav className={`${className} border-solid h-fit`}>
       <ul className="flex flex-col justify-center items-center p-5 px-0 text-left pl-3 ">
         <a
           href="#"

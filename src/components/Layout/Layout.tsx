@@ -7,11 +7,11 @@ interface LayoutProps {
 
 function Layout({ children }: LayoutProps): JSX.Element {
   return (
-    <div className="bg-default">
+    <div className="bg-default min-h-screen">
       <Navbar />
-      <div className="flex items-stretch min-h-screen ">
+      <div className="flex items-stretch">
         <Sidebar className="w-1/6" />
-        <main className="w-2/3 flex flex-col bg-default">{children}</main>
+        <main className="w-2/3 flex flex-col">{children}</main>
       </div>
       <Footer />
     </div>
