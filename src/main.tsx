@@ -1,6 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import {
+  createBrowserRouter,
+  RouterProvider,
+  BrowserRouter,
+} from 'react-router-dom';
 import App from './App';
 import Layout from './components/Layout/Layout';
 
@@ -10,18 +14,24 @@ import SignIn from './pages/SignIn/SignIn';
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <App />,
+    element: (
+      <Layout>
+        <App />
+      </Layout>
+    ),
   },
   {
     path: '/signin',
-    element: <SignIn />,
+    element: (
+      <Layout>
+        <SignIn />
+      </Layout>
+    ),
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <Layout>
-      <RouterProvider router={router} />
-    </Layout>
+    <RouterProvider router={router} />
   </React.StrictMode>,
 );
