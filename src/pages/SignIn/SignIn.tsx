@@ -1,4 +1,6 @@
 import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
+import { login } from '../../slices/user-slice';
+import { useAppDispatch } from '../../app/hooks';
 import Heading from '../../components/Typography/Heading/Heading';
 import Paragraph from '../../components/Typography/Paragraph/Paragraph';
 import GoogleIcon from '@mui/icons-material/Google';
@@ -8,11 +10,12 @@ import { auth } from '../../../utils/firebase.js';
 
 const SignIn = () => {
   const googleProvider = new GoogleAuthProvider();
-
+  const dispatch = useAppDispatch();
   const googleLogIn = async () => {
     try {
       const result = await signInWithPopup(auth, googleProvider);
-      console.log(result.user);
+      const { displayName: name, email, photoURL: photo } = result.user;
+      dispatch(login({ name, email, photo }));
     } catch (err) {
       console.error(err);
     }

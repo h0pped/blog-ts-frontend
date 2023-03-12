@@ -1,8 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from '../redux/counter-slice'
+import counterReducer from '../slices/counter-slice'
+import userReducer from '../slices/user-slice'
 
 export const store = configureStore({
-    reducer: { counter: counterReducer }
+    reducer: { counter: counterReducer, user: userReducer }
 })
 
 export type AppDispatch = typeof store.dispatch
