@@ -13,7 +13,7 @@ const DailyBrief = () => {
     }, 1000);
   };
   return (
-    <div className="w-1/2 flex flex-col  mt-10 drop-shadow-md bg-white rounded-md py-5">
+    <div className="w-1/2 flex flex-col  mt-5 drop-shadow-md bg-white rounded-md py-5">
       <Paragraph className="mx-5">
         Суд в Крыму оштрафовал мужчину на 50 тысяч рублей за заказ украинской
         песни. Диджею, поставившему трек, дали 10 суток
